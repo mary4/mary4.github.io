@@ -1,0 +1,55 @@
+﻿<!Doctype html>
+<html>
+  <head>
+  <title>Website</title>
+  <meta charset="utf-8">
+  <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Let's train to work with images</h1>
+	<h5>Давайте навчимося працювати з зображеннями</h5>
+	
+	<div class="block-1">
+	<!--вставляємо зображення-->
+	<!--для цого використовуємо тег img.
+	Атрибут src задає адресу картинки, вона має складатись з назви картинки і її розширення.
+	можливі варіанти розширення картинки:
+	.jpg 
+	.jpeg
+	.png
+	.gif
+	це потрібно подивитись у властивостях картинки (вибрати картинку в папці і клацнути правою кнопкою миші 
+	і знайти пункт "властивості або свойства")	-->
+	
+	<!--В рядку нижче назва картинки - picture1, а розширення - .jpg-->
+	 <img src="picture1.jpg" class="pic1" alt="picture of landscape">
+	 <p>
+	    Для того, щоб розмістити зображення на сторінці можна використати непарний тег <b>img</b>.
+	    <br>
+		Атрибут <b>src</b> вкаже адресу зображення. Воно має міститись у тій самій папці, що й сам сайт. 
+	    Обов'язково потрібно вказати правильну назву і розширення зображення, інакше воно не загрузиться браузером.
+	    <br>
+		Атрибут <b>alt</b> задає альтернативний текст для зображення, який відобразиться на сторінці в браузері, 
+	    якщо зображення не завантажиться.
+	    <br> 
+		Вказавши за допомогою атрибута <b>class</b> клас або так звану додаткову назву, можемо окремо оформити цю картинку.  
+	 </p>
+	</div>
+	
+	<!--оскільки, у css файлі ми задали картинці властивість float, ми повинні зупинити обтікання.
+	 В цьому файлі у тому місці, де ми хочемо зупинити обтікання потрібно вписати рядок коду:  <div class="clearfix"></div>
+	 А в css-файлі рядок: .clearfix{clear:both} -->
+	
+	<div class="clearfix"></div>
+	
+	<div class="block-2">
+	 <img src="picture1.jpg" class="pic2" alt="picture">
+	 <p>
+	   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	 </p>
+	</div>
+	<div class="clearfix"></div>
+			
+	
+  </body>
+</html>

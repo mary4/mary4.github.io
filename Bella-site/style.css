@@ -115,6 +115,11 @@ main{
 	color: white;
 	margin-top: 85px;
 }
+
+.get_it_now:hover{
+   box-shadow: 0px 2px 5px grey;
+}
+
 .function_item{
 	max-width: 30%;
   margin-top: 115px;

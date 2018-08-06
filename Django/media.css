@@ -1,0 +1,438 @@
+@media all and (max-width:1024px){
+
+    .menu>li{
+        margin: 0 15px;
+    }
+
+    .bunner .title{
+        font-size: 30px;
+        margin-bottom: 2%;
+    }
+
+    .in-center{
+        position: static;
+        margin: auto;
+        margin-top: 10%;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%);
+    }
+
+    .new_item{
+        margin: 0 5%;
+    }
+
+    .new_item_pic{
+        width: 60px;
+        text-align: center;
+    }
+
+    .block{
+        display: block;
+    }
+
+    .block:first-child{
+       margin-bottom: 40px;
+   }
+
+   .facebook{
+    float:none;
+    }
+
+    .why_django{
+        padding-top: 80px;
+    }
+
+
+    .portfolio_item{
+        height: 260px;
+    }
+
+    .blog_container{
+        text-align: center;
+    }
+
+    .blog_item{
+        margin: auto;
+    }
+
+    .blog_item:first-child{
+
+    }
+
+    header{
+        padding: 0 15px;
+        padding-top: 20px;
+
+    }
+
+    .map .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    #slider .p_item_wrap:nth-child(5){
+     display: none;
+    }
+
+    #slider .p_item_wrap{
+        width: 33.33%;
+    }
+
+    label[for="name"],
+    label[for="email"]{
+        display: block;
+        width: 100%;
+    }
+
+    label[for="name"]{
+        margin-bottom: 25px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+
+    footer .left-block, .dv{
+        display: none;
+    }
+
+    .central-block{
+        margin-left: 0;
+    }
+
+    .right-block,
+    .left-block{
+        float: none;
+    }
+
+    footer .container {
+        text-align: center;
+    }
+
+    footer .mv{
+        display: block;
+        margin: 0 auto;
+    }
+    footer .social{
+        width: 25%;
+
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    footer span{
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 968px){
+
+    .new_item_text{
+        margin-left: 20px;
+    }
+}
+
+
+@media all and (max-width: 880px){
+       header .menu {
+        display: none;
+    }
+
+    .django_welcome::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    height:224px; 
+    width: 100%;
+    background-image: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.37) 63%, transparent 100%);
+    opacity: 0.7; 
+}
+
+    .grad{
+        display: block;
+        width: 100px;
+        height
+    }
+
+    .menu_mobile{
+        display: block;
+        float: left;
+        margin-top: 10px;
+    }
+
+    header .logo-text{
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+
+@media all and (max-width: 847px){
+    form .title{
+        font-size: 20px;
+    }
+}
+
+
+@media all and (max-width: 768px){
+
+   .new_item_pic{
+    max-width: 50px;
+    max-height:36px;
+    text-align: center;
+    }
+
+    .new_item:last-child .new_item_pic{
+        max-width: 20px;
+    }
+
+    .bunner .title {
+     font-size: 24px;
+    }
+
+     h2.m_title{
+        margin: 40px 0!important;
+    }
+
+    footer .menu>li{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .clearfix_2{
+        display: block;
+        clear: both;
+    }
+
+    .blog .title{
+        text-align: center;
+    }
+
+    .blog .container{
+        text-align: left;
+        padding: 1px 0;
+    }
+
+    .blog_item_content{
+        min-width: 186px;
+        width: 49.9%;
+    }
+
+    .item-1{
+        margin-right: 0.2%;
+    }
+
+    .item-3, .item-2{
+        width: 49.9%;
+        margin-right: 0;
+    }
+
+    .item-4{
+        margin-top: 2px;
+        width: 100%;
+    }
+
+  
+
+    #client-slider div:last-of-type{
+        display: none;
+    }
+
+    
+}
+
+
+
+@media all and (max-width: 698px){
+
+    .bunner .dev_and_integration{
+        font-size: 22px;
+    }
+}
+
+
+
+@media all and (max-width: 665px){
+    .why_django .text{
+       margin-bottom: 50px;    
+   }
+
+   .f_item_pic{
+    height: auto;
+    }
+
+
+    .feature_item{
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        margin-left: 15px;
+        margin-bottom: 25px;
+    }
+
+    .feature_item>div{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .feature_text{
+        width: 74.13%;
+    }
+
+    .f_item_pic{
+        width: 12.5%;
+        margin-right: 5.3%;
+    }
+    .f_item_pic img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    #client-slider div:nth-of-type(4){
+        display: none;
+    }
+}
+
+
+@media all and (max-width: 647px){
+    section.map{
+        margin-top: 420px;
+    }
+
+    .form_container{
+        position: absolute;
+        top:-420px;
+        left: 0;
+        width: 100%;
+    }
+
+    form{
+        padding-left:15px;
+        padding-right:15px;
+
+    }
+    form h2{
+        text-align: center;
+    }
+
+    input[type="submit"]{
+        min-width: 345px;
+        left: 50%;
+        display: inline-block;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+@media all and (max-width: 598px){
+    .portfolio .menu>li{
+        margin: 0;
+        margin-left: 25px;
+
+    }
+    .portfolio_item{
+        height: 200px;
+    } 
+}
+
+
+@media all and (max-width: 490px){
+    .bunner .title{
+        font-size: 25px;
+    }
+
+    .new_item_pic{
+        height: 35px;
+    }
+
+    .new_item_text .new_title{
+        font-size: 16px;
+    }
+
+    .new_item_text .new_description{
+       font-size: 14px;
+   }
+
+   .blog_button{
+    width: 80%;
+   }
+}
+
+@media all and (max-width: 426px){
+
+    .logo-text{
+        height: 30px;
+        width: 153px;   
+    }
+
+    .why_django {
+        padding: 30px 0  0px 0;
+    }
+
+    .why_django .text{
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .feature_title{
+        font-size: 16px;
+    }
+
+    .feature_description{
+        font-size: 14px;
+    }
+
+    .new_item{
+        margin: 0 10px;
+    }
+
+    .bunner .title{
+        font-size: 22px;
+    }
+
+    .bunner .dev_and_integration{
+        font-size: 16px;
+        margin-top: 26px;
+    }
+
+    .scroll{
+        bottom:-4%;
+    }
+
+    .scroll img{
+        width: 160px;
+    }
+
+    h2.m_title{
+        font-size: 22px!important;
+        margin: 35px 0!important;
+    }
+
+    .portfolio{
+        padding: 0px;
+        border: none;
+
+    }
+
+    .blog{
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    .client_item {
+        width: 58px;
+    }
+
+}

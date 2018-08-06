@@ -114,7 +114,15 @@ main{
 	font-size: 1rem;
 	color: white;
 	margin-top: 85px;
+	transition: 0.5s;
 }
+
+.get_it_now:hover{
+   box-shadow: 0px 2px 5px grey inside;
+	transform: translateY(-3px);
+	
+}
+
 .function_item{
 	max-width: 30%;
   margin-top: 115px;

@@ -702,17 +702,20 @@ span.green{
 	transition: 0.2s;
 }
 
-#client-slider{
+.client-slider{
 	position: relative;
+	width: 93.8596%;
+	margin: auto;
 }
 
 .client_item{
 	display: inline-block;
-	margin: 0 3.8%;
+	/*padding: 0 3.8%;*/
+	text-align: center;
 }
 
 .client_item img{
-	width: 100%;
+	margin: 0 auto;
 }
 
 .clients{
@@ -934,4 +937,55 @@ footer .mail{
 footer .tel img,
 footer .mail img{
 	margin-right: 14px;
+}
+
+
+
+.portfolio-slider .slick-prev {
+    left: 0;
+}
+
+.portfolio-slider .slick-next {
+    right: 0;
+}
+
+
+ .slick-prev, .slick-next {
+    z-index: 10;
+}
+
+.slick-prev:focus, .slick-next:focus,
+.slick-slide:focus
+{
+	outline: none;
+}
+
+
+.portfolio-slider .slick-prev{
+	left: 25px;
+}
+.portfolio-slider .slick-next{
+	right: 25px;
+}
+
+.portfolio-slider .slick-prev:before{
+	content: url("images/Left-slider.png");
+} 
+.portfolio-slider .slick-next:before{
+	content: url("images/Right-slider.png");
+	
+}
+
+.client-slider .slick-prev:before{
+	content: url("images/Left.png");
+} 
+.client-slider .slick-next:before{
+	content: url("images/Right.png");
+	
+}
+.client-slider .slick-prev{
+	left: 0;
+} 
+.client-slider .slick-next{
+	right: 0;
 }

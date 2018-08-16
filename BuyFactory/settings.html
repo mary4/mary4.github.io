@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Buy Factory</title>
+	
+	<link rel="shortcut icon" href="img/logo.png" type="image/png">
+
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" >
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/settings.css">
+	<link rel="stylesheet" href="css/media.css">
+	
+	
+
+</head>
+<body>
+	<header>
+		<div class="head">
+			<div class="container-fluid">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#header_menu">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+	
+				<div class="collapse navbar-collapse menu" id="header_menu">
+					<ul class="nav navbar-nav ">
+						<li class="active"><a href="#">Join</a></li>
+						<li><a href="#">How to make order?</a></li>
+						<li><a href="#">How to sell?</a></li>
+						<li><a href="#">How to pay?</a></li>
+						<li><a href="#">Delivery</a></li>		
+						<li><a href="#">Buy protection</a></li>
+						<li><a href="#">Guarantees</a></li>
+						<li><a href="#">Help</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</div>
+	
+				<div class="dropdown noclose language_dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="hide-2">English </span>
+						<span class="hide_now show-2">Eng </span>
+	
+						<img src="img/US-Flag.png" alt="us-flag" class="us-flag"> 
+						<i class="fa fa-angle-down arrow-down" aria-hidden="true"></i>
+						<span class="hide-1">USD</span>
+					</a>
+					<div class="dropdown-menu">
+						<span class="">Please, select your language and currency</span>
+						<div class="select">
+							<select name="language" id="select_language">
+								<option selected disabled>Select your language</option>
+								<option value="english">English</option>
+								<option value="russian">Russian</option>
+							</select>
+						</div>
+						<div class="select">
+							<select name="currency" id="select_currency">
+								<option selected disabled>Select your currency</option>
+								<option value="english">English</option>
+								<option value="russian">Russian</option>
+							</select>
+						</div>
+						<div class="box_for_btn">
+							<button class="save"> Save</button>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="header-body">
+			<div class="container-fluid">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+				</div>
+				<form action="" class="search">
+					<input type="search" placeholder="Search for products...">
+					<button class="search_button">Search</button>
+				</form>
+				<div class="header_box_for_buttons ">
+					<div class="header_big_button wishlist">
+						<div class="button_img wishlist_img"><img src="img/ic-wishlist11.png" alt="heart"></div>
+						<span>Wishlist</span>
+					</div>
+					<div class="header_big_button  cart">
+						<div class="button_img cart_img"><img src="img/ic-cart1.png" alt="cart"></div>
+						<span> <i class="item_count">3</i> Items (&#36<i class="item_price">145</i>)</span>
+					</div>
+					<div class="header_big_button dropdown account_dropdown  noclose">
+						<a href="#" class=" dropdown-toggle" data-toggle="dropdown">
+							<div class=" inline-block account">
+								<div class="button_img account_img"><img src="img/ic-user-pic1.png" alt="user"></div>
+								<span>Account</span>
+							</div>
+						</a>
+						<div class="dropdown-menu">
+							<div class="top_block">
+								<p>Have account on Buy Factory?</p>
+								<button class="sign_button">Sign in</button>
+								<p>Or Sign In via:</p>
+								<div class="social_block">
+									<button class="social">
+										<i class="fa fa-2x fa-facebook-square" aria-hidden="true" style="color: #4143ac;"></i>Facebook 
+									</button>
+									<button class="social">
+										<i class="fa fa-2x fa-google-plus-square" aria-hidden="true" style="color: #db4e37"></i>Google account
+									</button>
+								</div>
+								<p>Register New Account</p>
+								<button class="sign_button">Create New Account</button>
+							</div>
+							<ul class="account_menu">
+								<li><a href="#!">My Account</a></li>
+								<li><a href="#!">My Orders</a></li>
+								<li><a href="#!">Message Center</a></li>
+								<li><a href="#!">Wish List</a></li>
+								<li><a href="#!">My Coupons</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+	
+				<div class="select_category dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+						<div class="select_category_stripes inline-block">
+							<div class="stripe"></div>
+							<div class="stripe triangle"></div>
+							<div class="stripe last"></div>
+						</div> 
+						<span class="select_category_title">Categories</span>
+							<span  class="see_all">see all</span>
+					</a>
+					<div class="categories_block dropdown-menu">
+						<div class="category_line">
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/mens-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Man clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-shoes31.png" alt="">
+								</div>
+								<span class="category_item_title">Woman shoes and bags</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+						</div> <!-- category_line -->
+						<div class="category_line">
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/mens-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Man clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-shoes31.png" alt="">
+								</div>
+								<span class="category_item_title">Woman shoes and bags</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+						</div> <!-- category_line -->
+						<div class="category_line">
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/mens-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Man clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-shoes31.png" alt="">
+								</div>
+								<span class="category_item_title">Woman shoes and bags</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+						</div> <!-- category_line -->
+						<div class="category_line">
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/mens-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Man clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-shoes31.png" alt="">
+								</div>
+								<span class="category_item_title">Woman shoes and bags</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+							<a class="category_line_item">
+								<div class="category_item_image">
+									<img src="img/woman-clothes.png" alt="">
+								</div>
+								<span class="category_item_title">Woman clothes and accessories</span>
+							</a>
+						</div> <!-- category_line -->
+					</div> <!-- categories_block -->
+				</div> <!-- select_category -->
+			</div> <!-- conteiner-fluid -->
+	
+			</div> <!-- header-body -->
+	</header>
+
+	<main>
+		<div class="container-fluid">
+			<ul class="nav nav-tabs settings_menu">
+				<li><a href="#account" data-toggle="tab">Account</a></li>
+				<li><a href="#company"  data-toggle="tab">Company</a></li>
+				<li class="active"><a href="#pay" data-toggle="tab">Pay</a></li>
+				<li><a href="#categories" data-toggle="tab">Categories</a></li>
+				<li><a href="#delivery" data-toggle="tab">Delivery</a></li>
+				<li><a href="#certificates" data-toggle="tab">Certificates</a></li>
+				<li><a href="#licenses" data-toggle="tab">Licenses</a></li>
+				<li><a href="#photographs" data-toggle="tab">Photographs</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane" id="account">
+					<form action="" class="bussiness">
+						<div class="row">
+							<div class="col-md-4 col-sm-6 col-xs-6 form_row">
+								<label for="account_email"> E-mail:</label>
+								<input type="text" id="account_email">
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6  form_row">
+								<label for="account_first_name"> First name:<sup>*</sup></label>
+								<input type="text" id="account_first_name">
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6  form_row">
+								<label for="account_last_name"> Last name:<sup>*</sup></label>
+								<input type="text" id="account_last_name">
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6   form_row">
+								<label for="account_tel_number"> Telephone number:<sup>*</sup></label>
+								<input type="number" id="account_tel_number">
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6   form_row">
+								<label for="account_position"> Position:<sup>*</sup></label>
+								<input type="text" id="account_position">
+							</div>
+						</div>
+						<span class="required_fields"><sup>*</sup> - required fields</span>
+						<div class="button_container">
+							<button class="save">Save</button>
+							<button class="change_password">Change password</button>
+						</div>
+						
+					</form>
+				</div>
+				<div class="tab-pane" id="company">
+					<form action="" class="bussiness">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 form_row">
+								<label for="company_full_name"> Full name of the company:<sup>*</sup></label>
+								<input type="text" id="company_full_name">
+							</div>
+							<div class="col-md-6 col-sm-6 form_row">
+								<label for="short_name_company"> Short name of the company:<sup>*</sup></label>
+								<input type="text" id="short_name_company">
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-6 form_row">
+								<label for="registration_number"> Registration number:<sup>*</sup></label>
+								<input type="number" id="registration_number">
+								
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-6 form_row">
+								<label for="number_of_workers"> Number of workers:</label>
+								<input type="text" id="number_of_workers">
+							</div>
+							<div class="col-md-4 col-sm-4 col-xs-4 form_row">
+								<label for="date_of_foundation"> Date of foundation: </label>
+								<input type="text" id="date_of_foundation">
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-4 form_row">
+								<label for="place">Place:<sup>*</sup></label>
+								<select name="name_of_place" id="place">
+									<option value="russian">Russian</option>
+									<option value="russian">Russian</option>
+								</select>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-4 form_row">
+								<label for="currency">Currency:<sup>*</sup></label>
+								<select name="select_currency" id="currency">
+									<option value="USD">USD</option>
+									<option value="USD">USD</option>
+								</select>
+							</div>
+							<div class="col-md-2 col-sm-6 col-xs-12 form_row">
+								<label for="tel_number"> Telephone:<sup>*</sup></label>
+								<input type="textr" id="tel_number">
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for="website_name">Website:</label>
+								<input type="text" id="website_name">
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for="en">Email:<sup>*</sup></label>
+								<input type="email" id="email">
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for=""> Country:<sup>*</sup></label>
+								<select name="name_of_country" id="country">
+									<option value="russian">Russia</option>
+									<option value="russian">Russia</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for="town"> Town:<sup>*</sup> </label>
+								<input type="text" id="town">
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for="region">Region:<sup>*</sup></label>
+								<input type="text" id="region">
+							</div>
+							<div class="col-md-3 col-sm-4 col-xs-6 form_row">
+								<label for="index">Index:<sup>*</sup></label>
+								<input type="text" id="index">
+							</div>
+							<div class="col-md-6 col-xs-12 form_row">
+								<label for="address">Address:<sup>*</sup></label>
+								<input type="text" id="address">
+							</div>
+							<div class="col-md-6 col-xs-12 form_row">
+								<label for="address_2">Address 2:</label>
+								<input type="text" id="address_2">
+							</div>
+						</div>
+						<span class="required_fields"><sup>*</sup> - required fields</span>
+					<div class="button_container">
+							<button class="save">Save</button>
+						</div>
+					</form>
+				</div>
+				<div class="tab-pane active" id="pay">
+					<form action="" class="bussiness">
+						<div class="row">
+							<div class="col-md-5 col-sm-3 col-xs-8 form_row">
+								<label for="region">IBAN:<sup>*</sup></label>
+								<input type="text" id="region">
+							</div>
+							<button class="check">Check</button>
+					
+						</div>
+					
+						<div class="row">
+							<div class="col-md-4 col-sm-3 col-xs-12 form_row">
+								<label for="town"> Bank:<sup>*</sup> </label>
+								<input type="text" id="town">
+							</div>
+							<div class="col-md-5 col-sm-4  col-xs-8 form_row">
+								<label for="region">Department:<sup>*</sup></label>
+								<input type="text" id="region">
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-4 form_row">
+								<label for="index">SWIFT / BIC:<sup>*</sup></label>
+								<input type="text" id="index">
+							</div>
+							<div class="col-md-4 col-sm-4  col-xs-6 form_row">
+								<label for=""> Country:<sup>*</sup></label>
+								<select name="name_of_country" id="country">
+									<option value="russian">Russia</option>
+									<option value="russian">Russia</option>
+								</select>
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-6  form_row">
+								<label for="town"> Town:<sup>*</sup> </label>
+								<input type="text" id="town">
+							</div>
+							<div class="col-md-3 col-sm-3 col-xs-6 form_row">
+								<label for="region">Region:<sup>*</sup></label>
+								<input type="text" id="region">
+							</div>
+							<div class="col-md-2 col-sm-2 col-xs-6 form_row">
+								<label for="index">Index:<sup>*</sup></label>
+								<input type="text" id="index">
+							</div>
+							<div class="col-md-6 col-xs-12 form_row input_red">
+								<label for="address">Address:<sup>*</sup></label>
+								<input type="text" id="address">
+							</div>
+							<div class="col-md-6 col-xs-12 form_row ">
+								<label for="address_2">Address 2:</label>
+								<input type="text" id="address_2">
+							</div>
+						</div>
+						<span class="required_fields"><sup>*</sup> - required fields</span>
+						<div class="button_container">
+							<button class="save">Save</button>
+						</div>
+						
+					</form>
+				<div class="tab-pane" id="categories">...</div>
+				<div class="tab-pane" id="delivery">...</div>
+				<div class="tab-pane" id="licenses">...</div>
+				<div class="tab-pane" id="photographs">...</div>
+
+
+
+			</div>
+
+		</div>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="logo_footer">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="menu_holder">
+				<ul class="menu_footer">
+					<li>
+						<h2>Help</h2>
+						<ul>
+							<li><a href="#!">How to make an order?</a></li>
+							<li><a href="#!">How to sell</a></li>
+							<li><a href="#!">Become a seller</a></li>
+						</ul></li>
+					</ul>
+					
+					<ul class="menu_footer">
+						<li><h2>Buyer</h2>
+							<ul>
+								<li><a href="#!">Resolution Center</a></li>
+								<li><a href="#!">Making Payments</a></li>
+								<li><a href="#!">How to make an order?</a></li>
+								<li><a href="#!">Delivery</a></li>
+								<li><a href="#!">Buyer protection</a></li>
+							</ul>
+						</li>
+					</ul>
+					
+					<ul class="menu_footer">
+						<li><h2>Factory</h2>
+							<ul>
+								<li><a href="#!">Become a seller</a></li>
+								<li><a href="#!">How to sell</a></li>
+								<li><a href="#!">Support Factory B-F</a></li>
+							</ul>
+						</li>
+					</ul>
+	
+					<ul class="menu_footer">
+						<li><h2>About</h2>
+							<ul>
+								<li><a href="#!">Company Info</a></li>
+								<li><a href="#!">Investors</a></li>
+								<li><a href="#!">Polices & Rules</a></li>
+								<li><a href="#!">Contact us</a></li>
+								<li><a href="#!">Publication of the catalog</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<h3 class="copyright">
+					<i class="fa fa-copyright" aria-hidden="true"></i>
+					2016 Buy Factory. All rights reserved.
+				</h3>
+			</div>
+		</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+	<!-- to prevent dropdown from closing -->
+	<script type="text/javascript">
+		$(document).on("click.bs.dropdown.data-api", ".noclose", function (e) { e.stopPropagation() });
+	</script>	
+</body>
+</html>

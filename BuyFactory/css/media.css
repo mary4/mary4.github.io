@@ -1,0 +1,243 @@
+@media all and (max-width: 1390px) {
+  .select_category .categories_block {
+    width: 100%;
+    padding: 0 10px; } }
+
+@media all and (max-width: 1200px) {
+  .hide-1 {
+    display: none; }
+  .select_category {
+    margin-top: -35px; }
+  .header_box_for_buttons {
+    display: block;
+    margin: auto;
+    width: 100%;
+    text-align: center; }
+  .header-body form.search {
+    width: 58%;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+  .header_box_for_buttons .header_big_button {
+    padding: 15px 40px; }
+  .header_box_for_buttons .header_big_button:last-child {
+    padding: 0; }
+  .header_box_for_buttons .account_dropdown a {
+    padding: 15px 40px; } }
+
+@media all and (max-width: 1024px) {
+  .hide-2 {
+    display: none; }
+  .show-2 {
+    display: inline; } }
+
+@media all and (max-width: 992px) {
+  footer .logo_footer {
+    display: none; }
+  footer .menu_holder {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px; }
+  footer .copyright {
+    text-align: center;
+    margin-left: 0; }
+  .left_side_bar {
+    display: none; } }
+
+@media all and (max-width: 820px) {
+  header .menu ul {
+    padding: 0 10px; } }
+
+@media all and (min-width: 767px) {
+  .language_dropdown {
+    float: right; }
+  .navbar-toggle {
+    float: left; }
+  header .menu {
+    position: absolute;
+    background: white;
+    z-index: 150;
+    width: 100%;
+    top: 50px;
+    padding: 0px 15px; }
+    header .menu ul {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 0; }
+      header .menu ul li {
+        display: block;
+        text-align: left; } }
+
+@media all and (min-width: 768px) {
+  .navbar-collapse.collapse {
+    position: relative;
+    top: 0;
+    width: 85.2%;
+    display: inline-block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important; }
+  header .menu ul li {
+    display: inline-block;
+    text-align: center; } }
+
+@media all and (max-width: 767px) {
+  header .menu {
+    position: absolute;
+    background: white;
+    z-index: 150;
+    width: 100%;
+    top: 50px;
+    padding: 0px 15px; }
+    header .menu ul li {
+      display: block;
+      text-align: left; }
+  main .jumbo .static-block {
+    display: none; }
+  main .jumbo .slider-jumbo {
+    width: 100%; }
+  .navbar-toggle {
+    float: left; }
+  .language_dropdown {
+    float: right; }
+  .header_box_for_buttons {
+    text-align: right; }
+  .navbar-nav {
+    margin-left: 0;
+    margin-top: 0; }
+  header .menu ul li:first-child a {
+    margin-left: 0; }
+  .horizontal_items .hide_col {
+    display: none; }
+  .horizontal_items .category_name,
+  .horizontal_items .price_holder,
+  .horizontal_items .short_product_name {
+    display: block; }
+  .horizontal_items .category_name {
+    text-align: left;
+    display: block;
+    margin-bottom: 10px; }
+  .horizontal_items .price_holder {
+    position: static;
+    text-align: left;
+    margin-top: 12px; }
+  .horizontal_items .feedback,
+  .horizontal_items .orders {
+    display: inline-block;
+    margin-top: 10px; }
+  .horizontal_items .feedback {
+    margin-right: 30px; }
+  .horizontal_items .short_product_name {
+    color: #222;
+    font-size: 15px;
+    font-weight: 600; } }
+
+@media all and (max-width: 665px) {
+  .language_dropdown .arrow-down {
+    display: none; } }
+
+@media all and (max-width: 610px) {
+  .header_box_for_buttons {
+    text-align: center; }
+  .select_category {
+    margin: 15px 0; }
+  .header_box_for_buttons .header_big_button {
+    padding: 15px 30px; }
+  .header_box_for_buttons .header_big_button:last-child {
+    padding: 0; }
+  .header_box_for_buttons .account_dropdown a {
+    padding: 15px 30px; } }
+
+@media all and (max-width: 586px) {
+  footer .menu_footer {
+    width: 45%;
+    margin-bottom: 30px; } }
+
+@media all and (max-width: 580px) {
+  .item {
+    width: 100%; } }
+
+@media all and (max-width: 560px) {
+  .horizontal_items .category_name {
+    text-align: center; }
+  .horizontal_items .about_col {
+    margin-top: 15px; }
+  .horizontal_items .hide_now {
+    display: none; }
+  .horizontal_items .hide_col,
+  .horizontal_items .about_col,
+  .horizontal_items .pr_pic_col {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .horizontal_items .product_name {
+    padding: 0 30px;
+    text-align: center;
+    max-height: 80px; }
+  .horizontal_items .price_holder {
+    position: static;
+    margin-top: 0;
+    text-align: center; }
+  .horizontal_items .subcol_content {
+    height: auto; }
+  .horizontal_items .h_item {
+    position: relative; }
+  .horizontal_items .about_col {
+    position: static; }
+  .horizontal_items .item_rating {
+    position: absolute;
+    top: 15px;
+    left: 40px; }
+  .horizontal_items .like_ikon {
+    top: 20px;
+    right: 40px; }
+  .horizontal_items .shipping {
+    display: inline-block;
+    margin-right: 30px; } }
+
+@media all and (max-width: 475px) {
+  form.bussiness .form_row {
+    width: 100%; }
+  button.check {
+    margin: 10px 15px; } }
+
+@media all and (max-width: 426px) {
+  .header-body .logo {
+    width: 35px;
+    height: 39px; }
+  .header-body form.search {
+    margin-top: 15px;
+    margin-bottom: 10px; }
+    .header-body form.search input[type="search"] {
+      height: 35px;
+      padding: 5px 10px; }
+    .header-body form.search .search_button {
+      height: 35px; }
+  .header_box_for_buttons .header_big_button {
+    padding: 15px 15px; }
+  .header_box_for_buttons .header_big_button:last-child {
+    padding: 0; }
+  .header_box_for_buttons .account_dropdown a {
+    padding: 15px 15px; }
+  .banner .banner_title {
+    font-size: 40px; }
+  .header-body form.search .search_button {
+    font-size: 13px; }
+  .header_box_for_buttons .header_big_button span {
+    font-size: 12px; }
+  main h2.categories_title {
+    font-size: 20px; }
+  main .jumbo .static-block {
+    display: none; }
+  main .jumbo .slider-jumbo {
+    width: 100%; }
+  .slick-dots li button {
+    height: 10px;
+    width: 10px; }
+  main .categories .carusel_item_title {
+    font-size: 14px; }
+  main .categories .slick-prev {
+    left: 20px; }
+  main .categories .slick-next {
+    right: 20px; } }
+
+/*# sourceMappingURL=media.css.map */

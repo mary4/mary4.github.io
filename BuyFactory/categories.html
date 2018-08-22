@@ -15,23 +15,22 @@
 
 	<!-- jquery -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
 	<link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic" rel="stylesheet">
-
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
+	<!-- bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
+	<!-- select2 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
 
+	<!-- slick -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 
 	<link rel="stylesheet" href="css/style.css">
@@ -313,127 +312,127 @@
 			<div class="row"> <!-- all content -->
 				<div class="col-md-3 left_side_bar">
 					<div class="content" id="accordion">
-				<h3 class="filter_title active">Price</h3>
-				<div class="price_range filter_content ">
-					<div id="slider-range" class="asd">
-					</div>
-					<form class='slider_form'>
-						<input type="text" id="min-amount" value="75">
-						<input type="text" id="max-amount" value="250">
-					</form>
-				</div>
-				
-				<h3 class="filter_title">Type</h3>
-				<div class="check_box filter_content ">
-					<div class="check_box_item">
-						<input type="checkbox" id="handmade">
-						<label for="handmade" class="filter_check_label">Handmade</label>
-					</div>
-					<div class="check_box_item">
-						<input type="checkbox" id="recicled">
-						<label for="recicled" class="filter_check_label">Recicled</label>
-					</div>
-					<div class="check_box_item">
-						<input type="checkbox" id="made_usa">
-						<label for="made_usa" class="filter_check_label">Handmade</label>
-					</div>
-					<div class="check_box_item">
-						<input type="checkbox" id="exclusive">
-						<label for="exclusive" class="filter_check_label">Handmade</label>
-					</div>
-				</div>
-				
-				<h3 class="filter_title">Colors</h3>
-				<div class="color_choice filter_content ">
-					<input type="checkbox" id="color-black">
-					<label for="color-black" class="black"></label>
-					<input type="checkbox" id="color-red">
-					<label for="color-red" class="red"></label>
-					<input type="checkbox" id="color-yellow">
-					<label for="color-yellow" class="yellow"></label>
-					<input type="checkbox" id="color-green">
-					<label for="color-green" class="green"></label>
-					<input type="checkbox" id="color-blue">
-					<label for="color-blue" class="blue"></label>
-				</div>
-				
-				<h3 class="filter_title">Brands</h3>
-				<div class="brand_choice filter_content">
-					<div  class="label_search">
-						<input type="text"  placeholder="Search" id="brand_search">
-					</div>
-					<div class="brands_group">
-						<div class="check_box_item">
-							<input type="checkbox" id="art">
-							<label for="art" class="filter_check_label">Art & Shock</label>
+						<h3 class="filter_title active">Price</h3>
+						<div class="price_range filter_content ">
+							<div id="slider-range" class="asd">
+							</div>
+							<form class='slider_form'>
+								<input type="text" id="min-amount" value="75">
+								<input type="text" id="max-amount" value="250">
+							</form>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="food">
-							<label for="food" class="filter_check_label">Best Food</label>
+						
+						<h3 class="filter_title">Type</h3>
+						<div class="check_box filter_content ">
+							<div class="check_box_item">
+								<input type="checkbox" id="handmade">
+								<label for="handmade" class="filter_check_label">Handmade</label>
+							</div>
+							<div class="check_box_item">
+								<input type="checkbox" id="recicled">
+								<label for="recicled" class="filter_check_label">Recicled</label>
+							</div>
+							<div class="check_box_item">
+								<input type="checkbox" id="made_usa">
+								<label for="made_usa" class="filter_check_label">Handmade</label>
+							</div>
+							<div class="check_box_item">
+								<input type="checkbox" id="exclusive">
+								<label for="exclusive" class="filter_check_label">Handmade</label>
+							</div>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="canonical">
-							<label for="canonical" class="filter_check_label">Canonical</label>
+						
+						<h3 class="filter_title">Colors</h3>
+						<div class="color_choice filter_content ">
+							<input type="checkbox" id="color-black">
+							<label for="color-black" class="black"></label>
+							<input type="checkbox" id="color-red">
+							<label for="color-red" class="red"></label>
+							<input type="checkbox" id="color-yellow">
+							<label for="color-yellow" class="yellow"></label>
+							<input type="checkbox" id="color-green">
+							<label for="color-green" class="green"></label>
+							<input type="checkbox" id="color-blue">
+							<label for="color-blue" class="blue"></label>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="crafted_stuff">
-							<label for="crafted_stuff" class="filter_check_label">Crafted stuff</label>
+						
+						<h3 class="filter_title">Brands</h3>
+						<div class="brand_choice filter_content">
+							<div  class="label_search">
+								<input type="text"  placeholder="Search" id="brand_search">
+							</div>
+							<div class="brands_group">
+								<div class="check_box_item">
+									<input type="checkbox" id="art">
+									<label for="art" class="filter_check_label">Art & Shock</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="food">
+									<label for="food" class="filter_check_label">Best Food</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="canonical">
+									<label for="canonical" class="filter_check_label">Canonical</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="crafted_stuff">
+									<label for="crafted_stuff" class="filter_check_label">Crafted stuff</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="delicious">
+									<label for="delicious" class="filter_check_label">Delicious</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="hugers">
+									<label for="hugers" class="filter_check_label">Hugers</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="master_stuff">
+									<label for="master_stuff" class="filter_check_label">Master stuff</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="food2">
+									<label for="food2" class="filter_check_label">Best Food</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="canonical2">
+									<label for="canonical2" class="filter_check_label">Canonical</label>
+								</div>
+							</div>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="delicious">
-							<label for="delicious" class="filter_check_label">Delicious</label>
+						<h3 class="filter_title">Rating</h3>
+						<div class="rating filter_content">
+							<div class="check_box_item">
+									<input type="checkbox" id="food3">
+									<label for="food3" class="filter_check_label">Best Food</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="canonical3">
+									<label for="canonical3" class="filter_check_label">Canonical</label>
+								</div>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="hugers">
-							<label for="hugers" class="filter_check_label">Hugers</label>
+						<h3 class="filter_title">Collections</h3>
+						<div class="collections filter_content">
+							<div class="check_box_item">
+									<input type="checkbox" id="food5">
+									<label for="food5" class="filter_check_label">Best Food</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="canonical5">
+									<label for="canonical5" class="filter_check_label">Canonical</label>
+								</div>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="master_stuff">
-							<label for="master_stuff" class="filter_check_label">Master stuff</label>
+						<h3 class="filter_title">Special</h3>
+						<div class="special filter_content">
+							<div class="check_box_item">
+									<input type="checkbox" id="food4">
+									<label for="food4" class="filter_check_label">Best Food</label>
+								</div>
+								<div class="check_box_item">
+									<input type="checkbox" id="canonical4">
+									<label for="canonical4" class="filter_check_label">Canonical</label>
+								</div>
 						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="food2">
-							<label for="food2" class="filter_check_label">Best Food</label>
-						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="canonical2">
-							<label for="canonical2" class="filter_check_label">Canonical</label>
-						</div>
-					</div>
-				</div>
-				<h3 class="filter_title">Rating</h3>
-				<div class="rating filter_content">
-					<div class="check_box_item">
-							<input type="checkbox" id="food3">
-							<label for="food3" class="filter_check_label">Best Food</label>
-						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="canonical3">
-							<label for="canonical3" class="filter_check_label">Canonical</label>
-						</div>
-				</div>
-				<h3 class="filter_title">Collections</h3>
-				<div class="collections filter_content">
-					<div class="check_box_item">
-							<input type="checkbox" id="food5">
-							<label for="food5" class="filter_check_label">Best Food</label>
-						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="canonical5">
-							<label for="canonical5" class="filter_check_label">Canonical</label>
-						</div>
-				</div>
-				<h3 class="filter_title">Special</h3>
-				<div class="special filter_content">
-					<div class="check_box_item">
-							<input type="checkbox" id="food4">
-							<label for="food4" class="filter_check_label">Best Food</label>
-						</div>
-						<div class="check_box_item">
-							<input type="checkbox" id="canonical4">
-							<label for="canonical4" class="filter_check_label">Canonical</label>
-						</div>
-				</div>
 
 					</div> <!-- content -->
 				</div>
@@ -441,27 +440,63 @@
 
 					<div class="sort">
 						<span class="sort_text">Sort by: </span>
-						<div class="sort_item active">
-							Popularity
+						<div class="sort_item" id="popularity_box">
+							<select class="basic-single popularity" name="popularity" style="width: 100px;" data-placeholder="Popularity">
+								<option value=""></option>
+								<option value="best">Best</option>
+								<option value="worst">Worst</option>
+								<option value="good">Good</option>
+								<option value="insine">Insine</option>
+							</select>
 						</div>
 						<div class="sort_item">
-							Price
+							<select class="basic-single price" name="price" style="width: 70px;" data-placeholder="Price">
+								<option value=""></option>
+								<option value="worst">Worst</option>
+								<option value="good">Good</option>
+								<option value="insine">Insine</option>
+							</select>
 						</div>
 						<div class="sort_item">
-							Orders
+							<select class="basic-single orders" name="orders" style="width: 80px;" data-placeholder="Orders">
+								<option value=""></option>
+								<option value="worst">Worst</option>
+								<option value="good">Good</option>
+								<option value="insine">Insine</option>
+							</select>
 						</div>
 						<div class="state_buttons">
 							<button class="item_vertical">
-								<img src="img/Rectangle-3.png" alt="">
+								<!-- <img src="img/Rectangle-3.png" alt=""> -->
+								<div class="wrap">
+									<div class="square state-color"></div>
+									<div class="square state-color"></div>
+								</div>
+								<div class="wrap">
+									<div class="square state-color"></div>
+									<div class="square state-color"></div>
+								</div>							
 							</button>
 							<button class="item_horizontal">
-								<img src="img/Rectangle-4.png" alt="">
+								<!-- <img src="img/Rectangle-4.png" alt=""> -->
+								<div class="wrap">
+									<div class="square-2 state-color"></div>
+									<div class="line state-color"></div>
+								</div>
+									<div class="wrap">
+									<div class="square-2 state-color"></div>
+									<div class="line state-color"></div>
+								</div>
+									<div class="wrap">
+									<div class="square-2 state-color"></div>
+									<div class="line state-color"></div>
+								</div>
 							</button>
 						</div>
 					</div>
 
 					<div class="products row">
-						<div class="vertical_items ">
+						<div class="vertical_items">
 							<div class="col-md-4 col-sm-4 col-xs-6 item">
 								<div  class="col_content">
 									<div class="top_evaluate">
@@ -750,7 +785,7 @@
 								</div> <!-- col_content -->
 							</div>
 						</div>
-						<div class="horizontal_items hidden">
+						<div class="horizontal_items">
 							<div class="col-md-12 h_item">
 								<div  class="col-content">
 									<div class="row product_item">
@@ -1245,6 +1280,9 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- select2 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<!-- slick -->
 	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 	<script src="js/main.js"></script>

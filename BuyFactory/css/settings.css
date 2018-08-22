@@ -111,6 +111,18 @@ button:active {
 *:focus {
   outline: none; }
 
+.select2-container--default .select2-selection--single {
+  border: none; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none; }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: inherit; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: inherit; }
+
 .settings_menu {
   background: #fff;
   margin-top: 30px; }

@@ -111,6 +111,18 @@ button:active {
 *:focus {
   outline: none; }
 
+.select2-container--default .select2-selection--single {
+  border: none; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none; }
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: inherit; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: inherit; }
+
 main {
   padding-bottom: 48px; }
 
@@ -167,26 +179,68 @@ main {
     position: relative;
     display: inline-block;
     margin-right: 50px; }
-    .sort .sort_item::after {
-      content: '\f107';
-      font-family: FontAwesome;
-      position: absolute;
-      top: 2px;
-      right: -15px; }
-  .sort .sort_item.active {
+  .sort .basic-single.active {
     color: #734ea4; }
+
+.select2-selection::after {
+  content: '\f107';
+  font-family: FontAwesome;
+  position: absolute;
+  z-index: 0;
+  top: 6px;
+  right: 5px;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out; }
+
+.select2-selection.active {
+  color: #734ea4; }
+  .select2-selection.active:after {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
 
 .state_buttons {
   display: inline-block;
   position: absolute;
-  right: 35px; }
+  right: 35px;
+  line-height: 0; }
+  .state_buttons .state-color {
+    background: #bdbdbd;
+    transition: 0.2s ease-out;
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out; }
+  .state_buttons .active .state-color {
+    background: #673ab7; }
+  .state_buttons .wrap {
+    padding: 0;
+    margin: 0;
+    font-size: 0; }
   .state_buttons .item_vertical {
-    height: 23px;
-    width: 23px;
-    margin-right: 15px; }
+    vertical-align: middle;
+    margin-right: 5px; }
+    .state_buttons .item_vertical .square {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      margin: 2px;
+      border-radius: 1px; }
   .state_buttons .item_horizontal {
-    height: 23px;
-    width: 28px; }
+    vertical-align: middle; }
+    .state_buttons .item_horizontal .square-2 {
+      height: 5px;
+      width: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 2px; }
+    .state_buttons .item_horizontal .line {
+      height: 5px;
+      width: 20px;
+      display: inline-block;
+      vertical-align: middle; }
 
 .products .content {
   background: #fff; }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, , initial-scale=1.0">
+	<title>Project</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="css/media.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+	<header>
+		Hello! Please choose option from below.
+	</header>
+	<main>
+		<section class="first">
+			<nav class="main_menu_box">
+				<ul class="main_menu">
+					<li id="m-main">
+						<a href="#!" class="tab_link" data-tab="s-main">Main</a>
+						<div class="tooltip">Shows text</div>
+					</li>
+					<li id="m-date">
+						<a href="#!" class="tab_link" data-tab="s-date">Date</a>
+						<div class="tooltip">Separates date to day, month, year, hour and minutes</div>
+					</li>
+					<li id="m-blocks">
+						<a href="#!" class="tab_link" data-tab="s-blocks">Blocks</a>
+						<div class="tooltip">You can move blocks and get picture</div>
+					</li>
+					<li id="m-animation">
+						<a href="#!" class="tab_link" data-tab="s-animation">Animation</a>
+						<div class="tooltip">Some animations </div>
+					</li>
+					<li id="m-chess">
+						<a href="#!" class="tab_link" data-tab="s-chess">Chess</a>
+						<div class="tooltip">Play chess</div>
+					</li>
+					<li id="m-slider">
+						<a href="#!" class="tab_link" data-tab="s-slider">Slider</a>
+						<div class="tooltip">Play with slider</div>
+					</li>
+				</ul>
+			</nav>
+			<div class="context">
+				<div class="part main hide" id="s-main">
+					<h2>Lorem ipsum</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+					<div class="menu-maker">
+						Add menu item:
+						<button class="y-n" id="create-new-item" data="new-menu">
+							<img src="img/add.png" alt="">
+						</button>
+						<ul id="new-menu">
+							<!-- <li>
+								<div class="item-title ">New menu item</div>
+								<div class="change-item-title hide">
+									<input type="text">
+									<button class="confirm-change">Save</button>
+								</div>
+								<button class="y-n add"><img src="img/add.png" alt=""></button>
+								<button class="y-n delete"><img src="img/remove.png" alt=""></button>
+							</li> -->
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="part date hide" id="s-date">
+					<form action="" id="dateCalc">
+						<label for="date">Please enter the date:</label> <br>
+						<input type="text" id="date" placeholder="00.00.0000 00:00">
+						<button class="reset" data-tab="date">
+							Reset
+						</button>
+
+						<p>Day: <input type="text" class="noinput" id="day" disabled></p>
+						<p>Month: <input type="text" class="noinput" id="month" disabled></p>
+						<p>Year: <input type="text" class="noinput" id="year" disabled></p>
+						<p>Hour: <input type="text" class="noinput" id="hour" disabled></p>
+						<p>Minutes: <input type="text" class="noinput" id="minutes" disabled></p>
+					</form>
+				</div>
+
+				<div class="part blocks hide" id="s-blocks">
+					<div class="block ui-widget-content" id="block1">
+						<img src="img/image_part_009.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_008.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_006.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_004.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_007.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_003.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_002.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_005.png" alt="">
+					</div>
+					<div class="block ui-widget-content">
+						<img src="img/image_part_001.png" alt="">
+					</div>
+				</div>
+
+				<div class="part animation hide" id="s-animation">
+					<button id="start_animation">Start animation</button>
+					<div class="cube_box">
+						<div class="cube" id="cube1"> 1 </div>
+						<div class="cube" id="cube2"> 2 </div>
+						<div class="cube" id="cube3"> 3 </div>
+					</div>
+				</div>
+				<div class="part chess hide" id="s-chess">
+					<div id="letters"></div>
+					<div id="numbers"></div>
+					<div id="chessbox"></div>
+					<div id="current-position">Enter new position</div>
+					<input type="text" id="new-position" placeholder="Example: A6">
+				</div>
+
+				<div class="part slider " id="s-slider">
+					
+				</div>
+
+			</div>
+		</section>
+	</main>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	 crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+	<script src="js/main.js"></script>
+	<script src="js/menuAdditing.js"></script>
+	<script src="js/slider.js"></script>
+</body>
+
+</html>

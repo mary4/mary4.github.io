@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "Basic"
+  },
+
+  {
+    "id": 2,
+    "name": "HTML",
+    "description": "Basic information of html and css",
+    "parentId": 1
+  },
+
+  {
+    "id": 5,
+    "name": "CSS",
+    "description": "Basic information of html and css",
+    "parentId": 1
+  },
+
+  {
+    "id": 4,
+    "name": "JS",
+    "description": "Start your journey to the world of JS!",
+    "parentId": 1
+  },
+
+  {
+    "id": 3,
+    "name": "jquery",
+    "description": "Very effective",
+    "parentId": 0
+  },
+
+  {
+    "id": 6,
+    "name": "Angular"
+  },
+
+  {
+    "id": 8,
+    "name": "Getting Started",
+    "parentId": 6
+  }
+
+]

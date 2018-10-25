@@ -1,0 +1,42 @@
+[
+  {
+    "id": 88,
+    "categoryId": 2,
+    "name": "HTML",
+    "description": "https://en.wikipedia.org/wiki/HTML"
+  },
+  {
+    "id": 75,
+    "categoryId": 4,
+    "name": "JS",
+    "description": "https://en.wikipedia.org/wiki/JavaScript"
+  },
+  {
+    "id": 99,
+    "categoryId": 3,
+    "name": "jquery",
+    "description": "lolololo"
+  },
+
+  {
+    "id": 777,
+    "categoryId": 6,
+    "name": "Angular",
+    "description": "ups"
+  },
+
+  {
+    "id": 32,
+    "categoryId": 8,
+    "name": "Angular. getting started",
+    "description": "ups22222 geting started"
+  },
+  {
+    "id": 32,
+    "categoryId": 1,
+    "name": "Basic",
+    "description": "Basic"
+  }
+
+
+]

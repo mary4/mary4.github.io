@@ -76,7 +76,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header{\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n.header h1{\r\n  text-align: center;\r\n}\r\n.header span{\r\n  color: red;\r\n}\r\nmain{\r\n  width: 90%;\r\n  margin: 0 auto;\r\n  position: relative;\r\n  z-index: 90;\r\n\r\n}\r\n.container{\r\n  font-size: 0;\r\n\r\n  margin: 0 auto;\r\n}\r\n.container *{\r\n  font-size: 1rem;\r\n}\r\n.side-menu, .content{\r\n  display: inline-block;\r\n  vertical-align: top;\r\n // border: 1px solid black;\r\n}\r\n.side-menu{\r\n \r\n  width: 160px;\r\n  background: #e3e3e3;\r\n  height: 300px\r\n}\r\n.content{\r\n  padding: 20px 10px;\r\n  width: auto\r\n}\r\n"
+module.exports = "\n.header {\n  position: relative;\n  z-index: 100;\n}\n\n  .header h1 {\n    text-align: center;\n  }\n\n  .header span {\n    color: red;\n  }\n\n  main {\n  width: 90%;\n  margin: 0 auto;\n  position: relative;\n  z-index: 90;\n}\n\n  .container {\n  font-size: 0;\n  margin: 0 auto;\n}\n\n  .container * {\n    font-size: 1rem;\n  }\n\n  .side-menu, .content {\n  display: inline-block;\n  vertical-align: top;\n}\n\n  .side-menu {\n  width: 160px;\n  background: #f3f3f3;\n}\n\n  .content {\n  padding: 20px 10px;\n  width: 75%;\n\n}\n"
 
 /***/ }),
 
@@ -87,7 +87,7 @@ module.exports = ".header{\r\n  position: relative;\r\n  z-index: 100;\r\n}\r\n.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\r\n  <h1>\r\n    Lets Start <span>{{ title }}</span>!\r\n  </h1>\r\n  <swu-menu></swu-menu>\r\n</div>\r\n\r\n<main>\r\n  <div class=\"container\">\r\n    <div class=\"side-menu\">\r\n      <!--<swu-side-menu></swu-side-menu>-->\r\n    </div>\r\n    <div class=\"content\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>\r\n</main>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"header\">\r\n  <h1>\r\n    Lets Start <span>{{ title }}</span>!\r\n  </h1>\r\n  <div class=\"nav\">\r\n    <swu-menu [categoriesList]=\"categoriesList\"></swu-menu>\r\n  </div>\r\n</div>\r\n\r\n  <main>\r\n    <div class=\"container\">\r\n      <div class=\"side-menu\">\r\n        <swu-side-menu [categoriesList]=\"categoriesList\"></swu-side-menu>\r\n      </div>\r\n      <div class=\"content\">\r\n        <router-outlet>\r\n        </router-outlet>\r\n      </div>\r\n    </div>\r\n  </main>\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -102,23 +102,36 @@ module.exports = "<div class=\"header\">\r\n  <h1>\r\n    Lets Start <span>{{ ti
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _categories_categories_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./categories/categories.service */ "./src/app/categories/categories.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(categoriesService) {
+        this.categoriesService = categoriesService;
         this.title = 'Study With Us';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.categoriesService.getCategories().subscribe(function (value) {
+            _this.categoriesList = value;
+        });
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'swu-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [_categories_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoriesService"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -140,12 +153,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _categories_categories_list_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./categories/categories-list.component */ "./src/app/categories/categories-list.component.ts");
-/* harmony import */ var _materials_display_material_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./materials/display-material.component */ "./src/app/materials/display-material.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _shared_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./shared/breadcrumbs.component */ "./src/app/shared/breadcrumbs.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _categories_categories_list_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./categories/categories-list.component */ "./src/app/categories/categories-list.component.ts");
+/* harmony import */ var _categories_side_menu_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./categories/side-menu.component */ "./src/app/categories/side-menu.component.ts");
+/* harmony import */ var _materials_display_material_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./materials/display-material.component */ "./src/app/materials/display-material.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _shared_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./shared/breadcrumbs.component */ "./src/app/shared/breadcrumbs.component.ts");
+/* harmony import */ var _shared_pagination_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./shared/pagination.component */ "./src/app/shared/pagination.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,24 +176,28 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _categories_categories_list_component__WEBPACK_IMPORTED_MODULE_4__["CategoriesListComponent"],
-                _materials_display_material_component__WEBPACK_IMPORTED_MODULE_5__["DisplayMaterialComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-                _shared_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_8__["BreadCrumbsComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _categories_categories_list_component__WEBPACK_IMPORTED_MODULE_5__["CategoriesListComponent"],
+                _categories_side_menu_component__WEBPACK_IMPORTED_MODULE_6__["SideMenuComponent"],
+                _materials_display_material_component__WEBPACK_IMPORTED_MODULE_7__["DisplayMaterialComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_8__["HomeComponent"],
+                _shared_breadcrumbs_component__WEBPACK_IMPORTED_MODULE_9__["BreadCrumbsComponent"],
+                _shared_pagination_component__WEBPACK_IMPORTED_MODULE_10__["PaginationComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_6__["AppRoutingModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -195,7 +214,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".categories-list, .categories-list ul{\r\n  font-size: 14px;\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\n  .categories-list{\r\n    text-align: center;\r\n\r\n  }\r\n\r\n  .sub-categories-list{\r\n  position: absolute;\r\n  width: 100%;\r\n \r\n}\r\n\r\n  .categories-list a {\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 10px 15px;\r\n}\r\n\r\n  .categories-list > li {\r\n    display: inline-block;\r\n    vertical-align: top;\r\n    position: relative;\r\n    width: 100px;\r\n    text-align: center;\r\n  }\r\n\r\n  .categories-list > li:hover> a{\r\n      background: #5ca479;\r\n    }\r\n\r\n  .categories-list > li:hover > a {\r\n      color: white\r\n    }\r\n\r\n  .sub-categories-list > li:hover > a{\r\n    background: #e4e4e4;\r\n  }\r\n\r\n  .categories-list {\r\n  //border-top: 1px solid grey;\r\n  //border-bottom: 1px solid grey;\r\n  background: #8ac99c;\r\n  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);\r\n}\r\n\r\n  a.active{\r\n  color: red;\r\n}\r\n"
+module.exports = ".categories-list, .categories-list ul{\r\n  font-size: 14px;\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n}\r\n\r\n.categories-list {\r\n  text-align: center;\r\n  background: #8ac99c;\r\n  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);\r\n}\r\n\r\n.sub-categories-list{\r\n  position: absolute;\r\n  width: 100%;\r\n  background: #cce7d4;\r\n}\r\n\r\n.categories-list a {\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 10px 15px;\r\n  color: black;\r\n}\r\n\r\n.categories-list > li {\r\n    display: inline-block;\r\n    vertical-align: top;\r\n    position: relative;\r\n    text-align: center;\r\n  }\r\n\r\n.categories-list > li:hover> a{\r\n      background: #5ca479;\r\n      color: white\r\n    }\r\n\r\n.sub-categories-list > li{\r\n    border-bottom: 1px solid #f5f5f5;\r\n    }\r\n\r\n.sub-categories-list > li:hover > a{\r\n    background: #e4e4e4;\r\n  }\r\n\r\n.categories-list a.active {\r\n  color: #ad3535;\r\n}\r\n"
 
 /***/ }),
 
@@ -206,7 +225,7 @@ module.exports = ".categories-list, .categories-list ul{\r\n  font-size: 14px;\r
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"nav\">\r\n  <ul class=\"categories-list\">\r\n    <li *ngFor =\"let category of mainCategoriesList\"\r\n         (click)=\"sendActiveId(category.id)\">\r\n         <a [routerLink]=\"[category.id]\" routerLinkActive=\"active\"> {{category.name}}</a>\r\n\r\n      <ul *ngIf=\"activeId == category.id\" class=\"sub-categories-list\">\r\n        <li *ngFor =\"let subcategory of childCategories(activeId)\">          \r\n          <a [routerLink]=\"[subcategory.id]\" routerLinkActive=\"active\">{{subcategory.name}} </a>\r\n        </li>\r\n      </ul>\r\n\r\n    </li>\r\n  </ul>\r\n</div>\r\n"
+module.exports = "\r\n  <ul class=\"categories-list\" >\r\n    <li *ngFor =\"let category of mainCategoriesList\"\r\n         (click)=\"sendActiveId(category.id)\">\r\n         <a [routerLink]=\"[category.id]\" routerLinkActive=\"active\"> {{category.name}}</a>\r\n\r\n      <ul *ngIf=\"activeId == category.id\" class=\"sub-categories-list\">\r\n        <li *ngFor =\"let subcategory of childCategories(activeId)\">          \r\n          <a [routerLink]=\"[subcategory.id]\" routerLinkActive=\"active\">{{subcategory.name}} </a>\r\n        </li>\r\n      </ul>\r\n\r\n    </li>\r\n  </ul>\r\n\r\n"
 
 /***/ }),
 
@@ -241,7 +260,6 @@ var CategoriesListComponent = /** @class */ (function () {
     CategoriesListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.categoriesService.getCategories().subscribe(function (value) {
-            _this.categoriesList = value;
             _this.mainCategoriesList = value.filter(function (temp) {
                 return temp.parentId === 0 || temp.parentId == undefined;
             });
@@ -259,6 +277,10 @@ var CategoriesListComponent = /** @class */ (function () {
             return temp.parentId == id;
         });
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], CategoriesListComponent.prototype, "categoriesList", void 0);
     CategoriesListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'swu-menu',
@@ -340,6 +362,81 @@ var CategoriesService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/categories/side-menu.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/categories/side-menu.component.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".side-menu {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n  padding: 10px 0;\r\n}\r\n\r\n.side-menu a {\r\n  text-decoration: none;\r\n  display: block;\r\n  padding: 10px 15px;\r\n  color: black;\r\n}\r\n\r\n.side-menu a:hover{\r\n    color: #3c894a;\r\n  }\r\n\r\n.side-menu a.active {\r\n  color: #ad3535;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/categories/side-menu.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/categories/side-menu.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"side-menu\">\r\n  <li *ngFor=\"let category of categoriesList\"\r\n      (click)=\"sendActiveId(category.id)\">\r\n    <a [routerLink]=\"[category.id]\" routerLinkActive=\"active\">\r\n    {{category.name}}</a>\r\n  </li>\r\n</ul>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/categories/side-menu.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/categories/side-menu.component.ts ***!
+  \***************************************************/
+/*! exports provided: SideMenuComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SideMenuComponent", function() { return SideMenuComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SideMenuComponent = /** @class */ (function () {
+    function SideMenuComponent() {
+        this.clicked = false;
+    }
+    SideMenuComponent.prototype.ngOnInit = function () {
+    };
+    SideMenuComponent.prototype.sendActiveId = function (id) {
+        if (this.activeId != id) {
+            this.activeId = id;
+        }
+        else
+            this.activeId = undefined;
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], SideMenuComponent.prototype, "categoriesList", void 0);
+    SideMenuComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'swu-side-menu',
+            template: __webpack_require__(/*! ./side-menu.component.html */ "./src/app/categories/side-menu.component.html"),
+            styles: [__webpack_require__(/*! ./side-menu.component.css */ "./src/app/categories/side-menu.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SideMenuComponent);
+    return SideMenuComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/home/home.component.ts":
 /*!****************************************!*\
   !*** ./src/app/home/home.component.ts ***!
@@ -380,7 +477,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".material-item{\r\n  padding: 10px;\r\n  color: darkolivegreen;\r\n\r\n}\r\n\r\n.material-list{\r\n  min-height: 300px;\r\n  padding: 10px;\r\n  background: #f6f3c0;\r\n}\r\n\r\n.material-list ul{\r\n  list-style:none;\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -391,7 +488,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<swu-breadcrumbs [id]=\"id\"> </swu-breadcrumbs>\r\n<p *ngIf=\"material\">\r\n  {{material.description}}\r\n</p>\r\n"
+module.exports = "<swu-breadcrumbs [id]=\"id\"> </swu-breadcrumbs>\r\n\r\n<div *ngIf=\"materialList\">\r\n  <div class=\"material-list\">\r\n    <ul>\r\n      <li *ngFor=\"let material of slicedList\">\r\n        <div class=\"material-item\">\r\n          {{material.description}}\r\n        </div>\r\n      </li>\r\n    </ul>\r\n    <p *ngIf=\"materialList.length==0\">No materials</p>\r\n  </div>\r\n  <swu-pagination [itemsOnPage]=\"itemsOnPage\"\r\n                  [materialList]=\"materialList\"\r\n                  (pageChanged)=\"changeList($event)\"></swu-pagination>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -425,8 +522,15 @@ var DisplayMaterialComponent = /** @class */ (function () {
         var _this = this;
         this.router = router;
         this.materialService = materialService;
+        this.itemsOnPage = 5;
+        this.currentPage = 1;
         this.subscription = this.router.params.subscribe(function (params) { return _this.id = params['id']; });
     }
+    DisplayMaterialComponent.prototype.ngOnInit = function () {
+        this.getMaterialForCategoryId();
+    };
+    DisplayMaterialComponent.prototype.ngOnChanges = function () {
+    };
     Object.defineProperty(DisplayMaterialComponent.prototype, "id", {
         get: function () {
             return this._id;
@@ -441,10 +545,19 @@ var DisplayMaterialComponent = /** @class */ (function () {
     DisplayMaterialComponent.prototype.getMaterialForCategoryId = function () {
         var _this = this;
         this.materialService.getMaterials().subscribe(function (materials) {
-            _this.material = materials.find(function (temp) {
+            _this.materialList = materials.filter(function (temp) {
                 return Number(temp.categoryId) == _this.id;
             });
+            _this.setSlicedList(1);
         });
+    };
+    DisplayMaterialComponent.prototype.setSlicedList = function (page) {
+        var start = (page - 1) * this.itemsOnPage;
+        var end = start + this.itemsOnPage;
+        this.slicedList = this.materialList.slice(start, end);
+    };
+    DisplayMaterialComponent.prototype.changeList = function (page) {
+        this.setSlicedList(page);
     };
     DisplayMaterialComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -597,6 +710,105 @@ var BreadCrumbsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_categories_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoriesService"]])
     ], BreadCrumbsComponent);
     return BreadCrumbsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/pagination.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/shared/pagination.component.css ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".pagination{\r\n  list-style: none;\r\n  padding: 0;\r\n  margin: 0;\r\n  margin-top: 20px;\r\n\r\n}\r\n.pagination li{\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n.pagination  a{\r\n    display: block;\r\n    padding: 5px 10px;\r\n    border: 1px solid #e9e9e9;\r\n    cursor: pointer;\r\n  }\r\n.pagination  a:hover{\r\n      background: #f6f4f4;\r\n    }\r\n.pagination  a.active {\r\n      color: red;\r\n      cursor: default;\r\n    }\r\n.pagination li.disabled {\r\n    background: #f3f3f3;\r\n  }\r\n.pagination li.disabled a{\r\n    cursor: default;\r\n  }\r\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/pagination.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/shared/pagination.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ul class=\"pagination\" *ngIf=\"pages.length!=0\">\r\n  <li [ngClass]=\"{disabled:currentPage === 1}\">\r\n    <a (click)=\"changeItems(1)\">First</a>\r\n  </li>\r\n  <li [ngClass]=\"{disabled: currentPage === 1}\">\r\n    <a (click)=\"changeItems(currentPage - 1)\"><i class=\"fas fa-chevron-left\"></i></a>\r\n  </li>\r\n  <li *ngFor=\"let page of pages \">\r\n    <a (click)=\"changeItems(page)\" [ngClass]=\"{active: currentPage == page}\">{{page}}</a>\r\n  </li>\r\n  <li [ngClass]=\"{disabled:currentPage === pages.length}\">\r\n    <a (click)=\"changeItems(currentPage + 1)\"><i class=\"fas fa-chevron-right\"></i></a>\r\n  </li>\r\n  <li [ngClass]=\"{disabled:currentPage === pages.length}\">\r\n    <a (click)=\"changeItems(pages.length)\">Last</a>\r\n  </li>\r\n</ul>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/shared/pagination.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/shared/pagination.component.ts ***!
+  \************************************************/
+/*! exports provided: PaginationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationComponent", function() { return PaginationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PaginationComponent = /** @class */ (function () {
+    function PaginationComponent() {
+        this.pageChanged = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.pages = [];
+        this.currentPage = 1;
+    }
+    PaginationComponent.prototype.ngOnInit = function () {
+        this.setPages();
+    };
+    PaginationComponent.prototype.ngOnChanges = function () {
+        this.setPages();
+    };
+    PaginationComponent.prototype.setPages = function () {
+        this.pages = [];
+        var pages;
+        if (this.materialList.length != 0) {
+            pages = Math.floor(this.materialList.length / this.itemsOnPage) + 1;
+            if (pages > 1) {
+                for (var i = 1; i <= pages; i++) {
+                    this.pages.push(i);
+                }
+            }
+        }
+    };
+    PaginationComponent.prototype.changeItems = function (page) {
+        if (page > 0 && page <= this.pages.length) {
+            this.currentPage = page;
+            this.pageChanged.emit(page);
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Array)
+    ], PaginationComponent.prototype, "materialList", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Number)
+    ], PaginationComponent.prototype, "itemsOnPage", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], PaginationComponent.prototype, "pageChanged", void 0);
+    PaginationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'swu-pagination',
+            template: __webpack_require__(/*! ./pagination.component.html */ "./src/app/shared/pagination.component.html"),
+            styles: [__webpack_require__(/*! ./pagination.component.css */ "./src/app/shared/pagination.component.css")]
+        })
+    ], PaginationComponent);
+    return PaginationComponent;
 }());
 
 
